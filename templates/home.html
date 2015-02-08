@@ -1,0 +1,12 @@
+<html>
+<head>
+</head>
+<body>
+	<h1>Esto es el home</h1>
+	{% if user.is_authenticated %}
+	  Hola, {{ user.first_name }}!
+		<br>
+		<a href="{% url 'auth:logout' %}?next={% url 'home:Signin' %}">Cerrar sesion</a>
+	{% endif %}
+</body>
+</html>
